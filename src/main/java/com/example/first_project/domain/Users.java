@@ -3,8 +3,8 @@ package com.example.first_project.domain;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "user")
-public class User {
+@Table(name = "users")
+public class Users {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "user_id", nullable = false)
@@ -16,7 +16,7 @@ public class User {
     @Column(nullable = false)
     private String password;
 
-    public User(String username, String password, String role) {
+    public Users(String username, String password, String role) {
         this.username = username;
         this.password = password;
         this.role = role;
@@ -49,7 +49,7 @@ public class User {
         this.role = role;
     }
 
-    public User() {
+    public Users() {
 
     }
 
